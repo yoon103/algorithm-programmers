@@ -23,9 +23,25 @@ def solution(n, arr1, arr2):
     return answer
 
 
-
 print(solution(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28]))
 # 기댓값 : ["#####", "# # #", "### #", "#  ##", "#####"]
 
 print(solution(6, [46, 33, 33, 22, 31, 50], [27, 56, 19, 14, 14, 10]))
 # 기댓값 : ["######", "### #", "## ##", " #### ", " #####", "### # "]
+
+'''
+# 다른 풀이
+# bin(i) : 숫자 i를 이진수로 변환
+# bin(i 연산자 j) : i,j를 이진수로 변경하여 이진 연산
+# string.rjust(n, [char]) : string을 크기가 n인 문자열로 만들고, 오른쪽으로 정렬. 빈공간은 char로 채우기. 디폴트는 공백.
+
+def solution(n, arr1, arr2):
+    answer = []
+    for i,j in zip(arr1, arr2):
+        row = str(bin(i|j))[2:]
+        row = row.rjust(n, "0")
+        row = row.replace("0", " ")
+        row = row.replace("1", "#")
+        answer.append(row)
+    return answer
+'''
