@@ -1,3 +1,8 @@
+# 프로그래머스 - 피보나치 수
+# https://programmers.co.kr/learn/courses/30/lessons/12945
+# n번째 피보나치 수에 % 1234567 한 값 리턴
+
+
 # # 재귀 - 런타임에러 테스트케잇 7~14
 # def solution(n):
 #     if n <= 1:
